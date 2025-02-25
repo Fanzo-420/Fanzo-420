@@ -1,0 +1,41 @@
+#include <iostream>
+#include <bitset>
+#include <string>
+	
+using namespace std;
+
+// Function to convert decimal to binary
+string decimalToBinary(int decimal) {
+    return bitset<16>(decimal).to_string().substr(16 – to_string(decimal).length());
+}
+
+// Function to convert binary to decimal
+int binaryToDecimal(string binary) {
+    return stoi(binary, nullptr, 2);
+}
+
+int main() {
+    int choice;
+    cout << “Conversion Menu:\n”;
+    cout << “1. Decimal to Binary\n”;
+    cout << “2. Binary to Decimal\n”;
+    cout << “Enter your choice (1 or 2): “;
+    cin >> choice;
+
+    if (choice == 1) {
+        int decimal;
+        cout << “Enter a decimal number: “;
+        cin >> decimal;
+        cout << “Binary representation: “ << decimalToBinary(decimal) << endl;
+    } else if (choice == 2) {
+        string binary;
+        cout << “Enter a binary number: “;
+        cin >> binary;
+        cout << “Decimal representation: “ << binaryToDecimal(binary) << endl;
+    } else {
+        cout << “Invalid choice!” << endl;
+    }
+
+    return 0;
+}
+
