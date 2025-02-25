@@ -16,24 +16,24 @@ int binaryToDecimal(string binary) {
 
 int main() {
     int choice;
-    cout << “Conversion Menu:\n”;
-    cout << “1. Decimal to Binary\n”;
-    cout << “2. Binary to Decimal\n”;
-    cout << “Enter your choice (1 or 2): “;
+    cout << "Conversion Menu:\n";
+    cout << "1. Decimal to Binary\n";
+    cout << "2. Binary to Decimal\n";
+    cout << "Enter your choice (1 or 2): ";
     cin >> choice;
 
     if (choice == 1) {
         int decimal;
-        cout << “Enter a decimal number: “;
+        cout << "Enter a decimal number: ";
         cin >> decimal;
-        cout << “Binary representation: “ << decimalToBinary(decimal) << endl;
+        cout << "Binary representation: " << decimalToBinary(decimal) << endl;
     } else if (choice == 2) {
         string binary;
-        cout << “Enter a binary number: “;
+        cout << "Enter a binary number: ";
         cin >> binary;
-        cout << “Decimal representation: “ << binaryToDecimal(binary) << endl;
+        cout << "Decimal representation: " << binaryToDecimal(binary) << endl;
     } else {
-        cout << “Invalid choice!” << endl;
+        cout << "Invalid choice!" << endl;
     }
 
     return 0;
